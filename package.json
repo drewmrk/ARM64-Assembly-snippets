@@ -1,0 +1,40 @@
+{
+  "name": "arm64-assembly-snippets-drew-markel",
+  "displayName": "ARM64 Assembly snippets",
+  "description": "Commonly used snippets for the ARM64 Assembly language",
+  "version": "0.0.1",
+  "author": {
+    "name": "Drew Markel"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/drewmrk/ARM64-Assembly-snippets"
+  },
+  "engines": {
+    "vscode": "^1.65.0"
+  },
+  "categories": [
+    "Snippets"
+  ],
+  "keywords": [
+    "asm",
+    "assembly",
+    "arm",
+    "arm64",
+    "assembly snippets",
+    "asm snippets",
+    "assembler"
+  ],
+  "contributes": {
+    "snippets": [
+      {
+        "language": "arm",
+        "path": "./snippets/snippets.code-snippets"
+      },
+      {
+        "language": "asm-collection",
+        "path": "./snippets/snippets.code-snippets"
+      }
+    ]
+  }
+}

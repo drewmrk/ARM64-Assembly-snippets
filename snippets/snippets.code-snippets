@@ -1,0 +1,94 @@
+{
+  "Text section": {
+    "prefix": "text",
+    "body": ["//", "// Text", "//", ".text\n", ".global ${1:main}"]
+  },
+  "Data section": {
+    "prefix": "data",
+    "body": ["//", "// Data", "//", ".data"]
+  },
+  "Push registers onto the stack": {
+    "prefix": "stp",
+    "body": "stp ${1:x29}, ${2:x30}, [sp, #-16]! // Push ${1:fp} and ${2:lr} onto the stack"
+  },
+  "Restore registers from the stack": {
+    "prefix": "ldp",
+    "body": "ldp ${1:x29}, ${2:x30}, [sp], #16 // Restore ${1:fp} and ${2:lr} from the stack"
+  },
+  "Alias": {
+    "prefix": "alias",
+    "body": "${1:var} .req ${2:x0} // Alias ${1:x0} as '${2:var}'"
+  },
+  "Copy": {
+    "prefix": "mov",
+    "body": "mov ${1:x0}, ${2:x1} // Copy ${2:x1} into ${1:x0}"
+  },
+  "Multiply": {
+    "prefix": "mul",
+    "body": "mul ${1:x0}, ${2:x1}, ${3:x2} // Multiply ${3:x1} by ${2:x2} and store the result in ${1:x0}"
+  },
+  "Logical shift left": {
+    "prefix": "lsl",
+    "body": "lsl ${1:x0}, ${2:x1}, ${3:x2} // Logically shift ${2:x1} left by ${3:x2} and store the result in ${1:x0}"
+  },
+  "Logical shift right": {
+    "prefix": "lsr",
+    "body": "lsr ${1:x0}, ${2:x1}, ${3:x2} // Logically shift ${2:x1} right by ${3:x2} and store the result in ${1:x0}"
+  },
+  "Add": {
+    "prefix": "add",
+    "body": "add ${1:x0}, ${2:x1}, ${3:x2} // Add ${3:x2} to ${2:x1} and store the result in ${1:x0}"
+  },
+  "Subtract": {
+    "prefix": "sub",
+    "body": "sub ${1:x0}, ${2:x1}, ${3:x2} // Subtract ${3:x2} from ${2:x1} and store the result in ${1:x0}"
+  },
+  "Compare": {
+    "prefix": "cmp",
+    "body": "cmp ${1:x0}, ${2:x1} // Compare ${1:x0} against ${2:x1}"
+  },
+  "Return": {
+    "prefix": "ret",
+    "body": "ret // Return"
+  },
+  "Release": {
+    "prefix": "release",
+    "body": ".unreq ${1:var} // Release ${1:var}"
+  },
+  "Call function": {
+    "prefix": "bl",
+    "body": "bl ${1:free} // Call ${1:free}"
+  },
+  "Equal to": {
+    "prefix": "beq",
+    "body": "beq ${1:free} // If ${2:x0} == ${3:x1}"
+  },
+  "Less than or equal to": {
+    "prefix": "ble",
+    "body": "ble ${1:free} // If ${2:x0} <= ${3:x1}"
+  },
+  "Less than": {
+    "prefix": "blt",
+    "body": "blt ${1:free} // If ${2:x0} < ${3:x1}"
+  },
+  "Greater than or equal to": {
+    "prefix": "bge",
+    "body": "bge ${1:free} // If ${2:x0} >= ${3:x1}"
+  },
+  "Greater than": {
+    "prefix": "bgt",
+    "body": "bgt ${1:free} // If ${2:x0} > ${3:x1}"
+  },
+  "Not equal to": {
+    "prefix": "bne",
+    "body": "bne ${1:free} // If ${2:x0} != ${3:x1}"
+  },
+  "Load data from register into another register": {
+    "prefix": "ldr",
+    "body": "ldr ${1:x0}, [${2:x1}] // Load data from ${2:x1} into ${1:x0}"
+  },
+  "Store data from register into another register": {
+    "prefix": "str",
+    "body": "str ${1:x1}, [${2:x0}] // Store data from ${1:x1} into ${2:x0}"
+  }
+}
