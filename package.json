@@ -1,12 +1,12 @@
 {
-  "name": "arm64-assembly-snippets-drew-markel",
+  "name": "arm64-assembly-snippets",
   "displayName": "ARM64 Assembly snippets",
   "description": "Commonly used snippets for the ARM64 Assembly language",
   "version": "0.0.1",
   "author": {
     "name": "Drew Markel"
   },
-  "publisher": "Drew-Markel",
+  "publisher": "drewmrk",
   "repository": {
     "type": "git",
     "url": "https://github.com/drewmrk/ARM64-Assembly-snippets"
