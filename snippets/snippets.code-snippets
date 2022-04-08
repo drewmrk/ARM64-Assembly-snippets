@@ -7,6 +7,10 @@
     "prefix": "data",
     "body": ["//", "// Data", "//", ".data"]
   },
+  "Thumb mode": {
+    "prefix": "thumb",
+    "body": ["//", "// Thumb", "//", ".thumb"]
+  },
   "Push registers onto the stack": {
     "prefix": "stp",
     "body": "stp ${1:x29}, ${2:x30}, [sp, #-16]! // Push ${1:fp} and ${2:lr} onto the stack"
@@ -90,5 +94,9 @@
   "Store data from register into another register": {
     "prefix": "str",
     "body": "str ${1:x1}, [${2:x0}] // Store data from ${1:x1} into ${2:x0}"
+  },
+  "Create a local variable": {
+    "prefix": "local",
+    "body": ".equ ${1:local}, ${2:8} // Local '${1:local}' variable"
   }
 }

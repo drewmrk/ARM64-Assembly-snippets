@@ -34,6 +34,17 @@ Prefix: `data`
 .data
 ```
 
+### Mode
+
+Prefix: `thumb`
+
+```asm
+//
+// Thumb
+//
+.thumb
+```
+
 ### Standard
 
 |  Prefix   |                                     Code                                      |
@@ -59,3 +70,4 @@ Prefix: `data`
 |   `bne`   |                           `bne next // If x0 != x1`                           |
 |   `ldr`   |                  `ldr x0, [x1] // Load data from x1 into x0`                  |
 |   `str`   |                 `str x1, [x0] // Store data from x1 into x0`                  |
+|  `local`  |                   `.equ local, 8 // Local "local" variable`                   |
