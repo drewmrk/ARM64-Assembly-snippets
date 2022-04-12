@@ -27,9 +27,17 @@
     "prefix": "mov",
     "body": "mov ${1:x0}, ${2:x1} // Copy ${2:x1} into ${1:x0}"
   },
+  "Floating point Copy": {
+    "prefix": "fmov",
+    "body": "fmov ${1:d0}, ${2:d1} // Copy ${2:d1} into ${1:d0}"
+  },
   "Multiply": {
     "prefix": "mul",
     "body": "mul ${1:x0}, ${2:x1}, ${3:x2} // Multiply ${3:x1} by ${2:x2} and store the result in ${1:x0}"
+  },
+  "Floating point Multiply": {
+    "prefix": "fmul",
+    "body": "fmul ${1:d0}, ${2:d1}, ${3:d2} // Multiply ${3:d1} by ${2:d2} and store the result in ${1:d0}"
   },
   "Logical shift left": {
     "prefix": "lsl",
@@ -43,13 +51,25 @@
     "prefix": "add",
     "body": "add ${1:x0}, ${2:x1}, ${3:x2} // Add ${3:x2} to ${2:x1} and store the result in ${1:x0}"
   },
+  "Floating point Add": {
+    "prefix": "fadd",
+    "body": "fadd ${1:d0}, ${2:xd}, ${3:d2} // Add ${3:d2} to ${2:d1} and store the result in ${1:d0}"
+  },
   "Subtract": {
     "prefix": "sub",
     "body": "sub ${1:x0}, ${2:x1}, ${3:x2} // Subtract ${3:x2} from ${2:x1} and store the result in ${1:x0}"
   },
+  "Floating point Subtract": {
+    "prefix": "fsub",
+    "body": "fsub ${1:d0}, ${2:d1}, ${3:d2} // Subtract ${3:d2} from ${2:d1} and store the result in ${1:d0}"
+  },
   "Compare": {
     "prefix": "cmp",
     "body": "cmp ${1:x0}, ${2:x1} // Compare ${1:x0} against ${2:x1}"
+  },
+  "Floating point Compare": {
+    "prefix": "fcmp",
+    "body": "fcmp ${1:d0}, ${2:d1} // Compare ${1:d0} against ${2:d1}"
   },
   "Return": {
     "prefix": "ret",
