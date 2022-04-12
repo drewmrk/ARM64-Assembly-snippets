@@ -2,7 +2,7 @@
   "name": "arm64-assembly-snippets",
   "displayName": "ARM64 Assembly snippets",
   "description": "Commonly used snippets for the ARM64 Assembly language",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "author": {
     "name": "Drew Markel"
   },
